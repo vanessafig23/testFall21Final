@@ -1,0 +1,32 @@
+<!doctype html> 
+<!-- lucky1.html		Vanessa Figueroa -->
+<!-- Web page that generates a lucky number from a range --> 
+<!-- ============================================= -->
+
+<html> 
+  <head> 
+    <title> Pick 4 lottery  </title> 
+  </head> 
+
+  <body> 
+    <h2> Pick 4 lottery </h2>
+   <p> 
+    Enter the maximum ball number (the lowest ball number always 0):
+     <input type="text" id="maxBox" size=0 value=9>. 
+  </p> 
+
+     <input type="button" value="Generate pick-4 winners" 
+         onclick="
+
+		maxVal=parseFloat(document.getElementById('maxBox').value);
+		number=Math.floor(Math.random()*(maxVal+1)) ;
+	      number2=Math.floor(Math.random()*(maxVal+1));
+	      number3=Math.floor(Math.random()*(maxVal+1));
+ 	      number4=Math.floor(Math.random()*(maxVal+1));
+ 		document.getElementById('outputDiv').innerHTML=
+			'The pick-4 winners is' + number +'-'+ number2 +'-'+ number3+ '-'+ number4;
+		">
+  <hr>
+  <div id="outputDiv"></div> 
+ </body> 
+</html> 
